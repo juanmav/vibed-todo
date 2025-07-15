@@ -23,6 +23,9 @@ docker-compose up --build
 
 The application will be available at http://localhost:3000.
 
+The PostgreSQL service exposes port `5432`, allowing you to connect for
+debugging purposes using tools like `psql` or graphical clients.
+
 ## Development
 Start the development server:
 ```bash
