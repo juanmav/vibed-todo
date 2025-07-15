@@ -14,4 +14,5 @@ export class Todo extends Model {
     defaultValue: false
   })
   completed!: boolean
+
 }

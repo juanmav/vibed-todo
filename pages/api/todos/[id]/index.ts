@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { sequelize } from '../../../lib/db'
-import { Todo } from '../../../models/Todo'
+import { sequelize } from '../../../../lib/db'
+import { Todo } from '../../../../models/Todo'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   await sequelize.sync()
