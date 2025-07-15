@@ -1,6 +1,7 @@
 import 'reflect-metadata'
 import { Sequelize } from 'sequelize-typescript'
 import { Todo } from '../models/Todo'
+import { Comment } from '../models/Comment'
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
@@ -9,7 +10,7 @@ const sequelize = new Sequelize({
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  models: [Todo],
+  models: [Todo, Comment],
   logging: false
 })
 
