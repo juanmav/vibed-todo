@@ -1,4 +1,5 @@
-import { Table, Column, Model, DataType } from 'sequelize-typescript'
+import { Table, Column, Model, DataType, HasMany } from 'sequelize-typescript'
+import { Comment } from './Comment'
 
 @Table({ tableName: 'todos' })
 export class Todo extends Model {
@@ -15,4 +16,6 @@ export class Todo extends Model {
   })
   completed!: boolean
 
+  @HasMany(() => Comment)
+  comments!: Comment[]
 }
