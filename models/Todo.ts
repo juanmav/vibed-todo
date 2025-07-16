@@ -15,7 +15,4 @@ export class Todo extends Model {
     defaultValue: false
   })
   completed!: boolean
-
-  @HasMany(() => Comment)
-  comments!: Comment[]
 }
