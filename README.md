@@ -22,6 +22,14 @@ Run database migrations after configuring the environment:
 ```bash
 npm run migrate
 ```
+You can revert all migrations using:
+```bash
+npm run migrate:down
+```
+To recreate a clean database and reapply all migrations, run:
+```bash
+npm run db:reset
+```
 
 ## Docker Compose
 To run the app along with a local PostgreSQL instance, use Docker Compose:
