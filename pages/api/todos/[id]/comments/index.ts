@@ -4,7 +4,6 @@ import { Todo } from '../../../../../models/Todo'
 import { Comment } from '../../../../../models/Comment'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  await sequelize.sync()
   const todoId = Array.isArray(req.query.id) ? parseInt(req.query.id[0], 10) : parseInt(req.query.id as string, 10)
   const todo = await Todo.findByPk(todoId)
   if (!todo) return res.status(404).end()

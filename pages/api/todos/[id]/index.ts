@@ -3,7 +3,6 @@ import { sequelize } from '../../../../lib/db'
 import { Todo } from '../../../../models/Todo'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  await sequelize.sync()
   const id = Array.isArray(req.query.id) ? req.query.id[0] : req.query.id
   const todo = await Todo.findByPk(id)
   if (!todo) return res.status(404).end()
