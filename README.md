@@ -7,7 +7,11 @@ This is a simple Next.js application for managing todos, backed by a PostgreSQL 
    ```bash
    npm install
    ```
-2. Configure database connection using environment variables:
+2. Copy the example environment file and adjust the values if needed:
+   ```bash
+   cp .env.example .env
+   ```
+   The following variables configure the database connection:
    - `DB_HOST`
    - `DB_PORT`
    - `DB_USER`
@@ -31,5 +35,6 @@ Start the development server:
 ```bash
 npm run dev
 ```
+The command automatically loads variables from `.env` for convenience.
 
 The API endpoints live under `pages/api/todos`. They use `sequelize-typescript` models from the `models` directory.
