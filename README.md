@@ -16,13 +16,23 @@ This is a simple Next.js application for managing todos, backed by a PostgreSQL 
    - `DB_PORT`
    - `DB_USER`
    - `DB_PASSWORD`
-   - `DB_NAME`
+    - `DB_NAME`
+
+Run database migrations after configuring the environment:
+```bash
+npm run migrate
+```
 
 ## Docker Compose
 To run the app along with a local PostgreSQL instance, use Docker Compose:
 
 ```bash
 docker-compose up --build
+```
+
+Once the containers are running, execute the migrations:
+```bash
+npm run migrate
 ```
 
 The application will be available at http://localhost:3000.
