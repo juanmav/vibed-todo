@@ -30,6 +30,10 @@ To recreate a clean database and reapply all migrations, run:
 ```bash
 npm run db:reset
 ```
+You can also populate the database with some example data for testing:
+```bash
+npm run seed
+```
 
 ## Docker Compose
 To run the app along with a local PostgreSQL instance, use Docker Compose:
