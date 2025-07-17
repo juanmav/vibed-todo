@@ -2,6 +2,9 @@ import 'reflect-metadata'
 import { Sequelize } from 'sequelize-typescript'
 import { Todo } from '../models/Todo'
 import { Comment } from '../models/Comment'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
@@ -15,3 +18,4 @@ const sequelize = new Sequelize({
 })
 
 export { sequelize }
+

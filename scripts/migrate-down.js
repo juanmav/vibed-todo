@@ -1,4 +1,5 @@
 const path = require('path');
+require('dotenv').config();
 process.env.TS_NODE_COMPILER_OPTIONS = '{"module":"commonjs"}';
 require('ts-node/register/transpile-only');
 const { sequelize } = require('../lib/db');
